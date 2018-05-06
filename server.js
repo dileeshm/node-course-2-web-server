@@ -2,6 +2,8 @@ const express = require('express');
 const ejs = require('ejs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 const app = new express();
 
 //set view engine to ejs
@@ -38,6 +40,6 @@ app.get('/about', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`Started listening for http requests on port`, 3000);
+app.listen(port, () => {
+  console.log(`Started listening for http requests on port`, port);
 });
